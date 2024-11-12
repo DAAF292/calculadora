@@ -1,41 +1,31 @@
-### **1. Actores Principales**
+1. Actores Principales
+Usuario: Persona que interactúa con la calculadora para realizar operaciones matemáticas básicas.
+2. Casos de Uso Principales
+Iniciar Calculadora
 
-- **Usuario**: La persona que interactúa con la calculadora para realizar operaciones matemáticas.
+Descripción: El usuario abre la aplicación y se le muestra un menú interactivo de opciones.
+Seleccionar Operación
 
-### **2. Casos de Uso Principales**
+Descripción: El usuario selecciona el tipo de operación deseada (suma, resta, multiplicación, división, raíz cuadrada, ver historial o salir).
+Ingresar Números
 
-1. **Iniciar Calculadora**
-   - **Descripción**: El usuario inicia la aplicación de la calculadora.
-   
-2. **Seleccionar Operación**
-   - **Descripción**: El usuario elige el tipo de operación que desea realizar (suma, resta, multiplicación, división, raíz cuadrada, ver historial o salir).
-   
-3. **Ingresar Números**
-   - **Descripción**: El usuario ingresa uno o dos números según la operación seleccionada.
-   
-4. **Realizar Cálculo**
-   - **Descripción**: La calculadora ejecuta la operación matemática seleccionada con los números proporcionados.
-   
-5. **Mostrar Resultado**
-   - **Descripción**: La calculadora muestra el resultado de la operación al usuario.
-   
-6. **Ver Historial**
-   - **Descripción**: El usuario puede ver un historial de todas las operaciones realizadas anteriormente.
-   
-7. **Salir de la Calculadora**
-   - **Descripción**: El usuario cierra la aplicación de la calculadora.
+Descripción: Según la operación seleccionada, el usuario ingresa uno o dos números.
+Realizar Cálculo
 
-### **3. Relaciones entre Actores y Casos de Uso**
+Descripción: La calculadora realiza el cálculo según la operación y los números proporcionados.
+Mostrar Resultado
 
-A continuación, se detalla cómo se relacionan los actores con los casos de uso:
+Descripción: La calculadora muestra el resultado de la operación en pantalla mediante un mensaje alert().
+Ver Historial
 
-- **Usuario** interactúa con todos los casos de uso mencionados.
+Descripción: El usuario puede solicitar ver un historial de todas las operaciones realizadas durante la sesión actual.
+Salir de la Calculadora
 
-### **4. Descripción del Diagrama de Casos de Uso**
-
+Descripción: El usuario cierra la aplicación seleccionando la opción de salida.
+3. Relaciones entre Actores y Casos de Uso
+Usuario: Realiza todos los casos de uso para interactuar completamente con la calculadora.
+4. Descripción del Diagrama de Casos de Uso
 Diagrama de Casos de Uso:
-
-```
 +---------------------+
 |      Usuario        |
 +---------------------+
@@ -44,17 +34,16 @@ Diagrama de Casos de Uso:
           |
           V
 +---------------------+
-|  Calculadora        |
+|    Calculadora      |
 +---------------------+
 | - Seleccionar Operación |
 | - Ingresar Números      |
 | - Realizar Cálculo      |
 | - Mostrar Resultado     |
 | - Ver Historial         |
-| - Salir de la Calculadora |
+| - Salir de la Calculadora|
 +---------------------+
-```
-```
+
         +--------------------+
         |      Usuario       |
         +---------+----------+
@@ -63,19 +52,19 @@ Diagrama de Casos de Uso:
     +-------------+-------------+
     |             |             |
     V             V             V
-+-------+     +-------+     +-------+
-| Iniciar|     | Seleccionar |  | Salir |
-|Calc   |     | Operación  |  | Calc  |
-+-------+     +-------+     +-------+
++--------+      +---------+   +--------+
+| Iniciar|      | Seleccionar| | Salir  |
+| Calc   |      | Operación  | | Calc   |
++--------+      +---------+   +--------+
                   |
                   |
     +-------------+-------------+
     |             |             |
     V             V             V
-+-------+     +-------+     +-------+
-| Ingresar|   | Realizar | | Ver   |
-|Numeros  |   |Cálculo   | |Historial|
-+-------+     +-------+     +-------+
++--------+      +---------+   +----------+
+|Ingresar|      | Realizar |  | Ver      |
+|Números |      |Cálculo   |  |Historial |
++--------+      +---------+   +----------+
                   |
                   |
                   V
@@ -83,4 +72,3 @@ Diagrama de Casos de Uso:
             |Mostrar     |
             |Resultado   |
             +------------+
-```
