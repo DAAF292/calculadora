@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- Indica que el documento es de tipo HTML5 -->
+<html lang="es"> <!-- Define el idioma del documento como español -->
+<head>
+    <!-- Metadatos del documento -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres para permitir acentos y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que la página sea responsive ajustando el ancho a la pantalla del dispositivo -->
+    <title>Calculadora Simple</title> <!-- Título que aparecerá en la pestaña del navegador -->
+    
+    <!-- Enlace al archivo CSS externo para los estilos -->
+    <link rel="stylesheet" href="./styles.css"> 
+    
+    <!-- Enlace al archivo JavaScript externo con la lógica de la calculadora -->
+    <script src="./script.js" defer></script> <!-- Usar "defer" asegura que el script se ejecute después de que el contenido del HTML haya sido cargado -->
+</head>
+<body>
+    <!-- Contenedor principal de la calculadora -->
+    <div class="calculadora">
+        <!-- Título de la calculadora -->
+        <h1>Calculadora</h1>
+        
+        <!-- Campo de entrada para el primer número -->
+        <input type="text" id="num1" placeholder="Número 1"> <!-- Campo de texto para el primer número con un placeholder para guiar al usuario -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+        
+        <!-- Campo de entrada para el segundo número -->
+        <input type="text" id="num2" placeholder="Número 2"> <!-- Campo de texto para el segundo número -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+        
+        <!-- Botón para realizar la suma -->
+        <button onclick="calculadora('sum')">Suma</button> <!-- Ejecuta la función `calculadora('sum')` al hacer clic para realizar una suma -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+        
+        <!-- Botón para realizar la resta -->
+        <button onclick="calculadora('rest')">Resta</button> <!-- Ejecuta la función `calculadora('rest')` al hacer clic para realizar una resta -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+        
+        <!-- Botón para realizar la multiplicación -->
+        <button onclick="calculadora('mul')">Multiplicación</button> <!-- Ejecuta la función `calculadora('mul')` al hacer clic para realizar una multiplicación -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+        
+        <!-- Botón para realizar la división -->
+        <button onclick="calculadora('div')">División</button> <!-- Ejecuta la función `calculadora('div')` al hacer clic para realizar una división -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+        
+        <!-- Botón para calcular la raíz cuadrada del primer número -->
+        <button onclick="calculadora('sqrt')">Raíz Cuadrada</button> <!-- Ejecuta la función `calculadora('sqrt')` al hacer clic para calcular la raíz cuadrada -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+        
+        <!-- Botón para mostrar el historial de operaciones -->
+        <button class="hist" onclick="mostrarHistorial(historial)">Ver Historial</button> <!-- Ejecuta la función `mostrarHistorial(historial)` al hacer clic para mostrar el historial. El botón tiene la clase 'hist' para aplicar estilos específicos -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+        
+        <!-- Botón para borrar el historial de operaciones -->
+        <button class="hist" onclick="borrarHistorial(historial)">Borrar Historial</button> <!-- Ejecuta la función `borrarHistorial(historial)` al hacer clic para borrar el historial -->
+        <br> <!-- Salto de línea para espaciar los elementos -->
+
+        <!-- Sección para mostrar el resultado de las operaciones -->
+        <h2>Resultado: <span id="resultado">0</span></h2> <!-- El resultado se mostrará aquí. El valor inicial es 0 y el resultado se actualiza dinámicamente al realizar operaciones -->
+    </div>
+</body>
+</html>
