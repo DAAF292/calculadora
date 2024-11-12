@@ -1,0 +1,35 @@
+Informe de Diseño e Implementación de la Calculadora Interactiva en JavaScript
+1. Introducción
+Este informe detalla el diseño, la implementación y los desafíos enfrentados en el desarrollo de una calculadora interactiva en JavaScript. La aplicación permite realizar operaciones básicas (suma, resta, multiplicación, división y raíz cuadrada), mantiene un historial de operaciones y controla las entradas del usuario.
+
+2. Decisiones de Diseño
+a. Menú Interactivo
+Para facilitar la navegación, se implementó un menú mediante prompt(), permitiendo al usuario elegir entre realizar operaciones, ver el historial o salir del programa.
+
+b. Organización en un Objeto Calculadora
+Las operaciones se encapsulan en un objeto Calculadora, donde cada función es un método independiente, simplificando el mantenimiento y futuras extensiones.
+
+c. Historial de Operaciones
+El historial se almacena en un array de texto, permitiendo una revisión de operaciones de la sesión actual. Esta estructura facilita el uso y simplifica el manejo de datos.
+
+d. Validación de Entradas
+Se incluyó una función de validación (validarInput()), que previene errores de división por cero o cálculos no válidos, como la raíz cuadrada de números negativos.
+
+e. Diseño Modular
+La aplicación se estructuró en módulos funcionales (menú, cálculo, historial, validación), promoviendo un código claro y escalable.
+
+3. Desafíos Encontrados
+a. Validación de Operaciones Especiales
+Se manejaron casos específicos, como la raíz cuadrada de números negativos, con mensajes de error para evitar operaciones inválidas.
+
+b. Formato de Historial en Memoria
+El historial se almacena en un array, una solución práctica para la sesión actual pero limitada para persistencia entre sesiones.
+
+c. Flujos de Entrada y Salida con prompt() y alert()
+Se eligieron prompt() y alert() para facilitar la interacción en consola; sin embargo, este método detiene la ejecución y podría optimizarse en futuras versiones gráficas.
+
+d. Centralización de la Función de Cálculo
+Todas las operaciones se gestionan en calculadora(), lo cual facilita la organización, aunque podría requerir ajustes si se añaden operaciones más complejas.
+
+4. Conclusión
+La calculadora interactiva es modular y robusta, con una interfaz de consola sencilla y validaciones adecuadas. Las decisiones de diseño facilitan la comprensión y escalabilidad de la aplicación, y se identifican mejoras potenciales en la persistencia del historial y la optimización de la interfaz.
