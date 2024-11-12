@@ -83,7 +83,7 @@ function mostrarHistorial(historial) {
         console.log("Aún no hay ninguna operación almacenada.");
     } else {
         // Une el historial en una cadena y lo muestra en consola y alerta
-        let hist = historial.join(" | ");
+        let hist = historial.join("\n");
         alert("Historial: " + hist);
         console.log("Historial:", hist);
     }
