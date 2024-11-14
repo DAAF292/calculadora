@@ -53,7 +53,9 @@ let historial = [];
 
 // Función que almacena cada operación en el historial
 function almacenar(num1, num2, operacion, resultado) {
-    const operacionStr = new Map([
+
+    if(resultado!=="Error"){       // mediante este if controlamos que las operaciones erróneas no se almacenen en el historial
+    const operacionStr = new Map([   // usamos un map clave valor para almacenar los tipos de operaciones y sus strings, mas deirecto de introducir en el array historial
         ['sum', `${num1} + ${num2} = ${resultado}`],
         ['rest', `${num1} - ${num2} = ${resultado}`],
         ['mul', `${num1} * ${num2} = ${resultado}`],
@@ -63,6 +65,7 @@ function almacenar(num1, num2, operacion, resultado) {
 
     historial.push(operacionStr);  // Agrega la operación al historial
     console.log(`Operación almacenada: ${operacionStr}`);
+    };
 }
 
 // Muestra el historial de operaciones almacenadas
@@ -94,14 +97,14 @@ function validarInput(num1, num2, operacion) {
 
 // Ejecuta la operación seleccionada y guarda el resultado en el historial
 function calculadora(operacion, num1, num2) {
-    if (!validarInput(num1, num2, operacion)) {  // Verifica que los valores sean válidos
-        return;
-    } else {
-        let resultado = Calculadora[operacion](num1, num2);  // Llama a la operación
-        almacenar(num1, num2, operacion, resultado);  // Almacena el resultado
-        alert("Resultado: " + resultado);
-    }
+    if (!validarInput(num1, num2, operacion)) return;  // Verifica que los valores sean válidos
+
+    let resultado = Calculadora[operacion](num1, num2);  // Llama a la operación
+    almacenar(num1, num2, operacion, resultado);  // Almacena el resultado en el historial
+
+    if (resultado !== "Error") alert("Resultado: " + resultado);  // Muestra el resultado solo si no hay error
 }
+
 
 // Inicia el programa llamando a la función principal del menú
 menuCalculadora();

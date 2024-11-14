@@ -1,29 +1,31 @@
 1. Actores Principales
 Usuario: Persona que interactúa con la calculadora para realizar operaciones matemáticas básicas.
+
 2. Casos de Uso Principales
-Iniciar Calculadora
-
+---Iniciar Calculadora
 Descripción: El usuario abre la aplicación y se le muestra un menú interactivo de opciones.
-Seleccionar Operación
 
+---Seleccionar Operación
 Descripción: El usuario selecciona el tipo de operación deseada (suma, resta, multiplicación, división, raíz cuadrada, ver historial o salir).
+
 Ingresar Números
+---Descripción: Según la operación seleccionada, el usuario ingresa uno o dos números.
 
-Descripción: Según la operación seleccionada, el usuario ingresa uno o dos números.
 Realizar Cálculo
+---Descripción: La calculadora realiza el cálculo según la operación y los números proporcionados.
 
-Descripción: La calculadora realiza el cálculo según la operación y los números proporcionados.
-Mostrar Resultado
-
+---Mostrar Resultado
 Descripción: La calculadora muestra el resultado de la operación en pantalla mediante un mensaje alert().
-Ver Historial
 
+---Ver Historial
 Descripción: El usuario puede solicitar ver un historial de todas las operaciones realizadas durante la sesión actual.
-Salir de la Calculadora
 
+---Salir de la Calculadora
 Descripción: El usuario cierra la aplicación seleccionando la opción de salida.
+
 3. Relaciones entre Actores y Casos de Uso
 Usuario: Realiza todos los casos de uso para interactuar completamente con la calculadora.
+
 4. Descripción del Diagrama de Casos de Uso
 Diagrama de Casos de Uso:
 +---------------------+
